@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "multilanguage-app-ecare",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

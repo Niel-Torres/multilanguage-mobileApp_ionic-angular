@@ -1,0 +1,7 @@
+{
+  "name": "multilanguage-app-ecare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
