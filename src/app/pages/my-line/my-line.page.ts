@@ -10,11 +10,6 @@ export class MyLinePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.checkLanguage();
-  }
-
-  checkLanguage(){
-    console.log('MyLine: Checking Language ...');
   }
 
 }

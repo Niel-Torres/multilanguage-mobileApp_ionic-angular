@@ -18,7 +18,6 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.linksMenu = this.menuService.getElementsMenu();
-    console.log(this.linksMenu);
   }
 
   goToLink(link){
