@@ -1,3 +1,18 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<div *ngIf="!loadingPage; else spinnerPage">
+  <ion-app>
+    <ion-router-outlet id="menuFloat"></ion-router-outlet>
+  </ion-app>
+  <footer>
+    <app-tabs-footer></app-tabs-footer>
+  </footer>
+</div>
+<ng-template #spinnerPage>
+  <div class="loading">
+    <ion-row>
+      <strong>Loading </strong>
+    </ion-row>
+    <ion-row>
+      <ion-icon name="time-outline" color="light"></ion-icon>
+    </ion-row>
+  </div>
+</ng-template>

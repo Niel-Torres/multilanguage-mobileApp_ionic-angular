@@ -1,0 +1,15 @@
+<ion-menu side="start" menuId="menuPrincipal" contentId="menuFloat" >
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="tertiary">
+    <ion-list class="ion-no-padding">
+      <ion-item color="tertiary" *ngFor="let linkMenu of linksMenu" (click)="goToLink(linkMenu.link)">
+        <ion-icon slot="start" name="{{linkMenu.image}}"></ion-icon>
+        <ion-label>{{ linkMenu.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

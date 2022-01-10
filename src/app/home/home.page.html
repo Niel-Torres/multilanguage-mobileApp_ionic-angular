@@ -1,20 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-row>
+    <ion-title>MyHey</ion-title>
+
+    <ion-segment (ionChange)="changeLanguage($event)" mode="ios" [(ngModel)]="segmentModel" >
+      <ion-segment-button value="en">
+        <ion-label>English</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="fr">
+        <ion-label>French</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<app-menu></app-menu>
 
+
+<ion-content [fullscreen]="true">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngFor="let content of contentForDashboard">
+      <strong>{{content.title}}</strong>
+      <p>{{content.subTitle}}</p>
+    </div>
   </div>
 </ion-content>
+
