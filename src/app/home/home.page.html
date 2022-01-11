@@ -22,9 +22,9 @@
 <app-menu></app-menu>
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" *ngIf="showDataContentsDashboard">
   <div id="container">
-    <div *ngFor="let content of contentForDashboard">
+    <div *ngFor="let content of dataContentsHome">
       <strong>{{content.title}}</strong>
       <p>{{content.subTitle}}</p>
     </div>

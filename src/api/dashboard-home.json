@@ -1,0 +1,14 @@
+{
+ "home" : [
+    {
+      "title": "Bienvenido",
+      "subTitle": "Welcome",
+      "language": "en"
+    },
+    {
+      "title": "Bonjour",
+      "subTitle": "Bienvenue",
+      "language": "fr"
+    }
+  ]
+}

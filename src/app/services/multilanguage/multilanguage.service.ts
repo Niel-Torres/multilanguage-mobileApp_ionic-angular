@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { GlobalService } from '../global.service';
+import { Events } from '../events.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MultilanguageService {
 
-  private currentLanguage = 'en'; //lang default
+  private currentLanguage = 'en';
   private availableLanguages = [
     {
       lang: 'en'
@@ -17,7 +17,7 @@ export class MultilanguageService {
   ];
 
   constructor(
-    private globalService: GlobalService
+    private events: Events
   ) {
     this.updateFromLocalStorage();
     this.updateFromUrl();
@@ -33,6 +33,10 @@ export class MultilanguageService {
     this.currentLanguage = lang;
   }
 
+  getAvailableLanguages(){
+    return this.availableLanguages;
+  }
+
   updateFromLocalStorage(){
      const langFromLocalStorage = localStorage.getItem('lang');
      if(langFromLocalStorage)
@@ -42,7 +46,6 @@ export class MultilanguageService {
   }
 
   updateFromUrl(){
-    //const langFromUrl = this.router.url.split('/')[1];
     const langFromUrl = location.pathname.split('/')[1];
     const found = this.availableLanguages.find( element => element.lang === langFromUrl);
     if(found){
@@ -57,7 +60,7 @@ export class MultilanguageService {
   }
 
   publishEvent(language: string){
-    this.globalService.publishSomeData({
+    this.events.publish('lang:changed', {
       lang: language
     });
   }

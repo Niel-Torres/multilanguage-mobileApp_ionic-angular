@@ -18,8 +18,4 @@ export class TabsFooterComponent implements OnInit {
     this.tabsMenu = this.menuService.getElementsMenu();
   }
 
-  ionViewWillEnter(){
-    console.log('TabsFooterComponent: ionViewWillEnter');
-  }
-
 }

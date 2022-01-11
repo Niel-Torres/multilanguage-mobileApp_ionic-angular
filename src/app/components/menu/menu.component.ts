@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from './../../services/menu/menu.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -13,8 +12,8 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private menuService: MenuService,
-    private router: Router
-  ) { }
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.linksMenu = this.menuService.getElementsMenu();
