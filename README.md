@@ -41,9 +41,9 @@ ionic serve
 
 ## 💻 Additional Information:
 Files to take into account:
-tsconfig.json => Added the values "resolveJsonModule" and "esModuleInterop" to true to import Local JSON directly
-proxy.conf.json => "/ api" has been added to solve CORS issue, since the json-server "/ apis" of this project are working on localhost: 3000
-angular.json => Added "proxy.conf.json" in "serve"
-package.json => The "api" script has been created to start our local server from "apis" (npm run api)
+- tsconfig.json => Added the values "resolveJsonModule" and "esModuleInterop" to true to import Local JSON directly
+- proxy.conf.json => "/ api" has been added to solve CORS issue, since the json-server "/ apis" of this project are working on localhost: 3000
+- angular.json => Added "proxy.conf.json" in "serve"
+- package.json => The "api" script has been created to start our local server from "apis" (npm run api)
 
   
