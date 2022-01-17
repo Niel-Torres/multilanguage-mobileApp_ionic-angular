@@ -2,8 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Events } from './services/events.service';
-import { MenuService } from './services/menu/menu.service';
-import { MultilanguageService } from './services/multilanguage/multilanguage.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,9 +13,7 @@ export class AppComponent implements OnInit{
 
   constructor(
     private router: Router,
-    private events: Events,
-    private menuService: MenuService,
-    private languageService: MultilanguageService
+    private events: Events
   ){
     console.log('appcomponents: constructor');
     this.initializeApp();
@@ -25,8 +21,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     console.log('appcomponents: ngOnInit');
-
-    //this.menuService.setElementsMenu(this.languageService.getCurrentLang());
     this.loadingPage=false;
   }
 

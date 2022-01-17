@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "api": "json-server src/api/dashboard-home.json --routes src/api/routes.json --no-cors=true"
+    "api": "json-server src/api/dashboard-home.json --routes src/api/routes.json --no-cors=true",
+    "test:coverage" : "ng test -- --watch=true --code-coverage"
   },
   "private": true,
   "dependencies": {
